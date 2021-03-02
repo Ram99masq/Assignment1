@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.78" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assignment1.CommonUtility\Assignment1.CommonUtility.csproj" />
+    <ProjectReference Include="..\Assignment1.Models\Assignment1.Models.csproj" />
+  </ItemGroup>
+
+</Project>

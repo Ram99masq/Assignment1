@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Assignment1.Models.Project>
+
+@{
+    ViewData["Title"] = "AllProjectDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>All Projects</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectName)
+            </th>
+          
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectDescription)
+            </th>
+            @*<th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>           
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectDescription)
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>
