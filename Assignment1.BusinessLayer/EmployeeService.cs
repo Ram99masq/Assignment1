@@ -1,6 +1,5 @@
 ﻿using Assignment1.Services.Interface;
 using System;
-using Assignment1.CommonUtility;
 using System.Threading.Tasks;
 using Assignment1.Models;
 using System.Data;

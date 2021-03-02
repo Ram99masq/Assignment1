@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using Assignment1.Services.Emp;
 using Assignment1.Services.Interface;
 using Assignment1.Services.Observer;
-using Assignment1.CommonUtility;
-using Assignment1.CommonUtility.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,9 +35,7 @@ namespace Assignment1.Web
                    new SqlConnection(Conn)
                );
             services.AddScoped<IEmployeeService, ContractEmployee>();
-            services.AddScoped<IEmployeeProject, FulltimeEmployee>();
-            services.AddScoped<IMessenger, Email>();
-            services.AddScoped<IMessenger, SlackClient>();
+            services.AddScoped<IEmployeeProject, FulltimeEmployee>();            
         }
 
 

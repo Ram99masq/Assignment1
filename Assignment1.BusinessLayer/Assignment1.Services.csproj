@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Assignment1.CommonUtility\Assignment1.CommonUtility.csproj" />
     <ProjectReference Include="..\Assignment1.Models\Assignment1.Models.csproj" />
   </ItemGroup>
 

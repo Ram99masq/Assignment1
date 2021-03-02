@@ -1,8 +1,6 @@
 ﻿using Assignment1.Services.Interface;
 using Assignment1.Services.Emp;
 using Assignment1.Services.Observer;
-using Assignment1.CommonUtility;
-using Assignment1.CommonUtility.Interface;
 using Assignment1.Models;
 using Assignment1.Web.Models;
 using Microsoft.AspNetCore.Http;
@@ -104,28 +102,7 @@ namespace Assignment1.Web.Controllers
                 subject.Unregister(observer1);
                 subject.ProductCount++;
 
-                var observers = subject.GetObservers();
-             
-                //Single reponsibility and Dependency injection - constructor
-                //Genric Utility like Report generation with 
-                var employee = new Employee { Name = "ramkumar", DOB = new DateTime(1988, 09, 10), Address = "Bangalore", EmployeeId = 99, PhoneNumber = "9739646857" };
-                IReportGeneration reportGeneration = new PDFReportGeneration(employee);
-                reportGeneration.GenerateReport();
-
-                reportGeneration = new CSVReportGeneration(employee);
-                reportGeneration.GenerateReport();
-
-                // Common Utitlies - email and slack
-                IMessenger messenger = new Email();
-                await messenger.SendMessage();
-
-                messenger = new SlackClient();
-                await messenger.SendMessage();
-
-                //Notification by Email and slack
-                Notification notification = new Notification(new Email());
-                await messenger.SendMessage();
-
+                var observers = subject.GetObservers();           
                 return View(observers);
             }
             catch (Exception ex)
