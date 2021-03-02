@@ -37,24 +37,7 @@ namespace Assignment1.Web
             services.AddScoped<IEmployeeService, ContractEmployee>();
             services.AddScoped<IEmployeeProject, FulltimeEmployee>();            
         }
-
-
-
-        //public static IServiceCollection Resolve(this IServiceCollection services, IConfiguration configuration)
-        //{
-        //    string Conn = configuration.GetConnectionString("DB");
-        //    services.AddTransient<IDbConnection>((connection) =>
-        //        new SqlConnection(Conn)
-        //    );
-
-        //    services.AddControllersWithViews();
-        //    services.AddScoped<IEmployeeService, ContractEmployee>();
-        //    services.AddScoped<IEmployeeProject, FulltimeEmployee>();
-        //    services.AddScoped<IMessenger, Email>();
-        //    services.AddScoped<IMessenger, SlackClient>();
-
-        //    return services;
-        //}
+                             
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
